@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Laila" rel="stylesheet">
+        <title>Portfolio</title>
+    </head>
+    
+    <body>
+        <main class='container'>
+            <img id='profile' src='./images/profile.jpg' />
+            <div class='links'>
+                <button class='button' id='blog' onclick=loadBlog()>Blog</button>
+                <button class='button' id='contact' onclick=loadContact()>Contact</button>
+                <button class='button' id='showcase' onclick=loadShowCase()>Showcase</button>
+                <button class='button' id='bio' onclick=loadBio()>Bio</button>
+            </div>
+            <div id="line"></div>
+            <div id='linespacer'></div>
+            <div id='mainwrapper'>
+                <div class='boxcontent'>
+                    <div id='populate'></div>
+                </div>
+            </div>
+        </main>
+            <footer id='footer'>
+                <span>
+                <strong>&copy Victor Adams 2019</strong>
+                <a href='https://www.linkedin.com/in/vadams0805/'>LinkedIn</a>                
+                <a href='https://github.com/Kysper?tab=repositories'>Github</a>
+            </span>
+            </footer>
+            
+        <script src='./js/jspages/typewriter.js'></script>
+        <script src='./js/jspages/bio.js'></script>
+        <script src='./js/jspages/blog.js'></script>
+        <script src='./js/jspages/contact.js'></script>
+        <script src='./js/jspages/showcase.js'></script>
+    </body>
+    
+    </html>
