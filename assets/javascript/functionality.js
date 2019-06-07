@@ -1,45 +1,73 @@
+var dataHome = data.home;
+var dataBio = data.bio;
+var dataPortFolio = data.portfolio;
+var dataContact = data.contact;
+var dataLinks = data.links;
+
+var Content = function (id, title, desc, links) {
+    this.id = id;
+    this.title = title;
+    this.desc = desc;
+    this.links = links;
+}
+
+var home = new Content(dataHome.id, dataHome.title, dataHome.description, dataLinks);
+var bio = new Content(dataBio.id, dataBio.title, dataBio.description, dataLinks);
+var portfolio = new Content(dataPortFolio.id, dataPortFolio.title, dataPortFolio.description, dataLinks);
+var contact = new Content(dataContact.id, dataContact.title, dataContact.description, dataLinks);
+var el = [home, bio, portfolio, contact];
 
 
-$(document).ready(function () {
-    document.querySelector('*').addEventListener('click', function (event) {
-        var el = ['home','bio','portfolio','contact'];
-        var id = event.target.id;
-        switch (id) {
-            case 'homeButton':
-            document.getElementById('bio','portfolio','contact').classList.remove('active');
-                document.getElementById('home').classList.add('active').add('container');
-                flipContent(el[0]);
-                break;
-            case 'bioButton':
-            document.getElementById('home','portfolio','contact').classList.remove('active');
-                document.getElementById('bio').classList.add('active').add('container');
-                flipContent(el[1]);
-                break;
-            case 'portfolioButton':
-            document.getElementById('home','bio','contact').classList.remove('active');
-                document.getElementById('portfolio').classList.add('active').add('container');
-                flipContent(el[2]);
-                break;
-            case 'contactButton':
-            document.getElementById('bio','portfolio','home').classList.remove('active');
-                document.getElementById('contact').classList.add('active').add('container')
-                flipContent(el[3]);
-                break;
-        }
-    })
-
-    function flipContent(location) {
-        var isActive = document.getElementById(location).className = 'active';
-        if (isActive) {
-            document.getElementById(location).attr = 'id','topPage';
-            document.getElementById(location).innerHTML = ` <div id='${location}' class='container active'>
-            <header>${toUpperCase(location)}</header>
-            <p>Welcome to the ${location} page!</p>
-        </div>`
-        } else if (!isActive) {
-            document.getElementById(location).innerHTML = `No longer active! =(`
-        } else {
-            console.log('Error no current active classes')
-        }
+document.querySelector('*').addEventListener('click', function (event) {
+    var id = event.target.id;
+    switch (id) {
+        case 'home-button':
+            document.getElementById('bio', 'portfolio', 'contact').classList.remove('active');
+            document.getElementById('home').classList.add('active');
+            setTopPage(el[0]);
+            break;
+        case 'bio-button':
+            document.getElementById('home', 'portfolio', 'contact').classList.remove('active');
+            document.getElementById('bio').classList.add('active');
+            setTopPage(el[1]);
+            break;
+        case 'portfolio-button':
+            document.getElementById('home', 'bio', 'contact').classList.remove('active');
+            document.getElementById('portfolio').classList.add('active');
+            setTopPage(el[2]);
+            break;
+        case 'contact-button':
+            document.getElementById('bio', 'portfolio', 'home').classList.remove('active');
+            document.getElementById('contact').classList.add('active');
+            setTopPage(el[3]);
+            break;
     }
 });
+
+//Style layout of the page
+
+
+function setTopPage(content){
+    var active = document.getElementsByClassName('active');
+    if(active){
+    document.getElementById('top-page').innerHTML = `<h3>Recently Clicked:</h3><br><div id='${content.id}'>
+    <h2>${content.title}<h2><br>
+    <p>${content.desc}</p><br>
+    <a href='${content.links.linkURL[0]}'>${content.links.linkName[0]}<br></a> | <a href='${content.links.linkURL[1]}'>${content.links.linkName[1]}<br></a>`
+    }else{
+        document.getElementById('top-page').innerHTML = 'Top Page';
+    }
+}
+
+function populatePage(){
+    el.forEach(contents =>{
+        document.getElementById(contents.id).innerHTML = `<div id='${contents.id}'>
+        <h2>${contents.title}<h2><br>
+        <p>${contents.desc}</p><br>
+        <a href='${contents.links.linkURL[0]}'>${contents.links.linkName[0]}</a> :: <a href='${contents.links.linkURL[1]}'>${contents.links.linkName[1]}<br></a>`
+    })
+}
+
+populatePage();
+
+

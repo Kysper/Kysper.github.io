@@ -6,61 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Victor's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/override.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Open+Sans" rel="stylesheet">
-    <script src="assets/javascript/functionality.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 
 
 <body>
-    <nav class="navbar fixed-top">
-        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' id="btnWrapper">
-        <img id='profile' src='./assets/images/profile.jpg'><br>
-            <span id="logo">
-                Victor Adams
-            </span>
-             <div class="btn-group" role="group">
-                <button type="button" id="homeButton" class="btn btn-primary" disabled>Home</button>
-                <button type="button" id="portfolioButton" class="btn btn-secondary">Portfolio</button> 
-                <button type="button" id="contactButton" class="btn btn-warning">Contact</button>
+    <nav class="navbar">
+            <div class="btn-group" role="group">
+                <span>
+                        <span id='logo'>VA</span>
+                <button type="button" id="home-button" class="btn">Home</button>
+                <button type="button" id="bio-button" class="btn">Bio</button>
+                <button type="button" id="portfolio-button" class="btn">Portfolio</button>
+                <button type="button" id="contact-button" class="btn">Contact</button>
+                <!-- <button type ="button" id='blog-button' class="btn" >Blog</button> -->
+                </span>
             </div>
         </div>
     </nav>
+<div id='top-page' class='container'>Recently Clicked:</div>
+    <div id='home' class='container active'>Home</div>
+    <div id='bio' class='container'></div>
+    <div id='portfolio' class='container'></div> 
+    <div id='contact' class='container'></div>
+    <div id='blog' class='container'></div>
 
-    <div class='container'>
-    <div class="contentSpawner"></div>
-</div>
-        <!-- Footer -->
-        <footer class="page-footer  pt-4">
+    <!-- Footer -->
+    <footer class="page-footer">
 
-            <!-- Footer Links -->
-            <div class="container-fluid text-center text-md-left">
-
-                <!-- Grid row -->
-                <div class="row">
-                    <!-- Grid column -->
-                    <div class="col-lg-12 col-md-12 col-md-12 col-12">
-
-                        <!-- Content -->
-                        <h5 class="text-uppercase">Made by: Victor Adams</h5>
-                        <button class='btn-footer'><a href="#" class="fa fa-github"></a></a></button>
-                        <button class='btn-footer'><a href="#" class="fa fa-facebook"></a></button>
-                        <button class='btn-footer'><a href="#" class="fa fa-twitter"></a></button>
-                        <!-- <button class='btn-footer'><a href="#" class="fa fa-blog"></a></button> -->
-                        <button class='btn-footer'><a href="#" class="fa fa-linkedin-square" aria-hidden="true"></a></button>
-
-                    </div>
-                    <!-- Grid column -->
-
-                    <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+                    <h5 class="text-uppercase">Made by: Victor Adams</h5>
+                    <button class='btn-footer'><a href="#" class="github"></a></a></button>
+                    <button class='btn-footer'><a href="#" class="facebook"></a></button>
+                    <button class='btn-footer'><a href="#" class="twitter"></a></button>
+                    <!-- <button class='btn-footer'><a href="#" class="fa fa-blog"></a></button> -->
+                    <button class='btn-footer'><a href="#" class="linkedin-square"></a></button>
                 </div>
-
+            </div>
 </body>
-
+<script src="./assets/javascript/json.js"></script>
+    <script src="./assets/javascript/functionality.js"></script>
 </html>
