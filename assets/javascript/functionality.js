@@ -80,6 +80,14 @@ function populatePage() {
     })
 }
 
+function instantiateIcons(){
+    for(let i =0; i < dataHome.technologies.length;i++){
+    document.getElementById('home').innerHTML += dataHome.technologies[i]
+    // console.log(dataHome.technologies[i]);
+}
+
+}
+
 function populatePortfolio() {
     document.getElementById('portfolio').innerHTML += html1
     document.getElementById('portfolio').innerHTML += html2;
@@ -89,20 +97,22 @@ function populatePortfolio() {
 function createHTML() {
     html1 = `<div id='portfolio-wrapper'>
         <h2 id='title'>${dataPortFolio.title[0]}<h2><br>
-            <img src='https://via.placeholder.com/100'>
+        <a href="https://ibb.co/0GWjkmJ"><img id='whatsfordinner' src="https://i.ibb.co/0GWjkmJ/whatsfordinner.png" alt="whatsfordinner" border="1"></a>
             <p id='desc'>${dataPortFolio.description[0]}</p>
+            <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}</span><br>
             <a id='links' href='${data.links.projectLinks[0]}'>${dataPortFolio.title[0]}</a></div>`;
-
     html2 = `<div id='portfolio-wrapper'>
             <h2 id='title'>${dataPortFolio.title[1]}<h2><br>
                 <img src='https://via.placeholder.com/100'>
                 <p id='desc'>${dataPortFolio.description[1]}</p>
+                <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}${dataHome.technologies[3]}${dataHome.technologies[6]}</span><br>
                 <a id='links' href='${data.links.projectLinks[1]}'>${dataPortFolio.title[1]}</a></div>`;
 
     html3 = `<div id='portfolio-wrapper'>
                 <h2 id='title'>${dataPortFolio.title[2]}<h2><br>
                     <img src='https://via.placeholder.com/100'>
                     <p id='desc'>${dataPortFolio.description[2]}</p>
+                    <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}${dataHome.technologies[3]}${dataHome.technologies[7]}</span><br>
                     <a id='links' href='${data.links.projectLinks[2]}'>${dataPortFolio.title[2]}</a></div>`;
 
     return html1, html2, html3;
@@ -111,6 +121,7 @@ function createHTML() {
 
 function init() {
     populatePage();
+instantiateIcons();
 }
 
 init()
