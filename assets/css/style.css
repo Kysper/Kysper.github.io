@@ -5,7 +5,10 @@
     font-family:'Muli', sans-serif;
 }
 
-body{background:cadetblue;}
+body{
+    background:cadetblue;
+
+}
 
 .navbar{
     border-bottom:5px solid orange;
@@ -22,6 +25,7 @@ span #logo {
     color:white;
     font-size:30px;
     font-weight:bold;
+    cursor:pointer;
 }
 
 .btn-group {
@@ -35,7 +39,7 @@ span #logo {
     text-shadow: 4px 4px 4px black;
     box-shadow: 4px 4px 4px black;
     padding:8px;
-    margin:5px 0px 0px 5%;
+    margin:5px 0px 0px 1%;
     cursor: pointer;
     font-size:20px;
     color:white;
@@ -46,12 +50,41 @@ span #logo {
     border-bottom:5px solid orange;
     text-shadow: 6px 6px 8px black;
     padding-left:1%;
-    font-size:20px;
+    font-size:15px;
+    line-height: 200%;
     color:white;
+    padding:10px;
+}
+
+#bio{
+    font-size:13px;
 }
 
 #top-page{
     background:powderblue;
+    display:inline-flex;
 }
+
+#portfolio{
+    display:inline-flex;
+    width:auto;
+    overflow:auto;
+}
+
+#portfolio-wrapper{
+    position:relative;
+    width: auto;
+    height: auto;
+    padding:10px;
+    margin:10px;
+    border:4px solid orange;
+    box-shadow: 5px 5px 10px black;
+    text-align:center;
+}
+
+#desc{
+    font-size:15px;
+}
+
 
 a{  text-decoration: none;}
