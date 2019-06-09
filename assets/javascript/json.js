@@ -29,13 +29,14 @@ var data = {
     contact: {
         id: 'contact',
         title: 'Contact',
-        description: 'Contact Me Here',
+        description: `Email: vadams.dev@gmail.com
+                      LinkedIn: https://www.linkedin.com/in/vadams0805/`,
         },
     links: {
         linkName: ['GitHub', 'LinkedIn'
             ],
         linkURL: ['www.github.com/Kysper', 'www.linkedin.com/vadams0805'
             ],
-        projectLinks:["https://kysper.github.io/WhatsforDinner/",'Christmas List','Abacus']
+        projectLinks:["https://kysper.github.io/WhatsforDinner/",'https://tbl-christmas-wishlist.herokuapp.com/#/wishlists','https://react-abacus.herokuapp.com/']
         }
     }
