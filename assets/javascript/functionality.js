@@ -34,6 +34,7 @@ document.querySelector('*').addEventListener('click', function (event) {
         case 'portfolio-button':
             document.getElementById('home', 'bio', 'contact').classList.remove('active');
             document.getElementById('portfolio').classList.add('active');
+            document.getElementById('top-page').textContent = '';
             setTopPage(el[3]);
             break;
         case 'contact-button':
@@ -42,24 +43,19 @@ document.querySelector('*').addEventListener('click', function (event) {
             setTopPage(el[2]);
             break;
         case 'logo':
-            document.getElementById('top-page').innerHTML = 'Recently Clicked:';
+            document.getElementById('top-page').innerHTML = '';
     }
 });
-
-//Style layout of the page
-
-
-
 function setTopPage(content) {
     var active = document.getElementsByClassName('active');
     if (active && content !== portfolio) {
-        document.getElementById('top-page').innerHTML = `<h3>Recently Clicked:</h3><br><div id='${content.id}'>
+        document.getElementById('top-page').innerHTML = `<div id='${content.id}'>
     <h2>${content.title}<h2><br>
     <p>${content.desc}</p><br>
     <a href='${content.links.linkURL[0]}'>${content.links.linkName[0]}<br></a> | <a href='${content.links.linkURL[1]}'>${content.links.linkName[1]}<br></a>`
-    } else {
-        console.log('====Error====\nDOM did not update!')
-    } if (active && content === portfolio) {
+    } 
+    
+    if (active && content === portfolio) {
         document.getElementById('top-page').innerHTML += html1
         document.getElementById('top-page').innerHTML += html2;
         document.getElementById('top-page').innerHTML += html3;
@@ -82,8 +78,7 @@ function populatePage() {
 
 function instantiateIcons(){
     for(let i =0; i < dataHome.technologies.length;i++){
-    document.getElementById('home').innerHTML += dataHome.technologies[i]
-    // console.log(dataHome.technologies[i]);
+    document.getElementById('home').innerHTML += dataHome.technologies[i];
 }
 
 }
@@ -97,20 +92,20 @@ function populatePortfolio() {
 function createHTML() {
     html1 = `<div id='portfolio-wrapper'>
         <h2 id='title'>${dataPortFolio.title[0]}<h2><br>
-        <a href="https://ibb.co/0GWjkmJ"><img id='whatsfordinner' src="https://i.ibb.co/0GWjkmJ/whatsfordinner.png" alt="whatsfordinner" border="1"></a>
+        <img class='portfolio-image' src='http://i64.tinypic.com/snmd1t.png'>       
             <p id='desc'>${dataPortFolio.description[0]}</p>
             <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}</span><br>
             <a id='links' href='${data.links.projectLinks[0]}'>${dataPortFolio.title[0]}</a></div>`;
     html2 = `<div id='portfolio-wrapper'>
             <h2 id='title'>${dataPortFolio.title[1]}<h2><br>
-                <img src='https://via.placeholder.com/100'>
+                <img class='portfolio-image' src='http://i66.tinypic.com/2wmghhh.png'>
                 <p id='desc'>${dataPortFolio.description[1]}</p>
                 <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}${dataHome.technologies[3]}${dataHome.technologies[6]}</span><br>
                 <a id='links' href='${data.links.projectLinks[1]}'>${dataPortFolio.title[1]}</a></div>`;
 
     html3 = `<div id='portfolio-wrapper'>
                 <h2 id='title'>${dataPortFolio.title[2]}<h2><br>
-                    <img src='https://via.placeholder.com/100'>
+                    <img class='portfolio-image' src='http://i64.tinypic.com/2uy38tl.png'>
                     <p id='desc'>${dataPortFolio.description[2]}</p>
                     <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}${dataHome.technologies[3]}${dataHome.technologies[7]}</span><br>
                     <a id='links' href='${data.links.projectLinks[2]}'>${dataPortFolio.title[2]}</a></div>`;

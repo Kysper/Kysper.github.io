@@ -28,6 +28,7 @@ span #logo {
     cursor:pointer;
 }
 
+a{  text-decoration: none;}
 .btn-group {
     position:relative;
     margin: 5px 10px 5px 5px;
@@ -71,9 +72,15 @@ span #logo {
     overflow:auto;
 }
 
+.portfolio-image{
+    width:80%;
+  height: 100px; 
+  border:2px solid orange; 
+}
+
 #portfolio-wrapper{
     position:relative;
-    width: 30%;
+    width: 31%;
     height: auto;
     padding:10px;
     margin:10px;
@@ -82,14 +89,27 @@ span #logo {
     text-align:center;
 }
 
-#whatsfordinner{}
-
 #desc{
     font-size:15px;
 }
-a{  text-decoration: none;}
 
 #footer{
     color:white;
     text-align:center;
+}
+
+@media only screen and (max-width:460px){
+    .btn{
+        width:100%;
+        font-size:25px;
+    }
+
+    #logo{margin-left:40%;
+    }
+
+    #portfolio-wrapper{
+        display:hidden;
+        min-width:100%;
+    }
+    
 }
