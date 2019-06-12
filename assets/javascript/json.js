@@ -3,20 +3,6 @@ var data = {
     home: {
         id: 'home',
         title: 'Home',
-        description: `Hello welcome to my profile.I hope you enjoy your stay`,
-        technologies: ['<img src="https://img.icons8.com/color/48/000000/javascript.png"/>',
-            '<img src="https://img.icons8.com/color/48/000000/html-5.png"/>',
-            '<img src="https://img.icons8.com/color/48/000000/css3.png"/>',
-            '<img src="https://img.icons8.com/color/48/000000/nodejs.png"/>',
-            '<img src="https://img.icons8.com/color/48/000000/git.png"/>',
-            '<img src="https://img.icons8.com/color/48/000000/firebase.png"/>',
-            '<img src="https://img.icons8.com/color/48/000000/mysql.png"/>',
-            '<img src="https://img.icons8.com/color/48/000000/mongodb.png"/>',
-            '<img src="https://img.icons8.com/color/48/000000/bootstrap.png"/>']
-    },
-    bio: {
-        id: 'bio',
-        title: 'Bio',
         description: `I grew up in a small town in West Virginia, I was fascinated by computers growing up, and
         I knew I wanted to work with technology at a young age.
         After graduating high school, I enjoyed reparing, building and maintaining computers for friends and family.
@@ -24,8 +10,30 @@ var data = {
         I spend my recent years working for a mirror and glass company cutting and fabricating mirrors for customers.
         Everything changed when we welcomed our first child into the world this year.
         After our baby girl's birth, I wanted to teach her to follow her dreams fearlessly and persistently.
-        In an attempt to show her this, I quit my job of eight years and enrolled in KU Coding Certificate in pursuit of my passions.`
-    },
+        In an attempt to show her this, I quit my job of eight years and enrolled in KU Coding Certificate in pursuit of my passions.`,
+        
+        technologies: ['<img class="icons" src="https://img.icons8.com/color/48/000000/javascript.png"/>',
+            '<img class="icons" src="https://img.icons8.com/color/48/000000/html-5.png"/>',
+            '<img class="icons" src="https://img.icons8.com/color/48/000000/css3.png"/>',
+            '<img class="icons" src="https://img.icons8.com/color/48/000000/nodejs.png"/>',
+            '<img class="icons" src="https://img.icons8.com/color/48/000000/git.png"/>',
+            '<img class="icons" src="https://img.icons8.com/color/48/000000/firebase.png"/>',
+            '<img class="icons" src="https://img.icons8.com/color/48/000000/mysql.png"/>',
+            '<img class="icons" src="https://img.icons8.com/color/48/000000/mongodb.png"/>',
+            '<img class="icons" src="https://img.icons8.com/color/48/000000/bootstrap.png"/>'],
+        
+        },
+    // bio: {
+    //     id: 'bio',
+    //     title: 'Bio',
+    //     description: `I grew up in a small town in West Virginia, I was fascinated by computers growing up, and
+    //     I knew I wanted to work with technology at a young age.
+    //     After graduating high school, I enjoyed reparing, building and maintaining computers for friends and family.
+    //     I met my wonderful wife soon after and moved to Missouri to be with her.
+    //     I spend my recent years working for a mirror and glass company cutting and fabricating mirrors for customers.
+    //     Everything changed when we welcomed our first child into the world this year.
+    //     After our baby girl's birth, I wanted to teach her to follow her dreams fearlessly and persistently.
+    //     In an attempt to show her this, I quit my job of eight years and enrolled in KU Coding Certificate in pursuit of my passions.`
     portfolio: {
         id: 'portfolio',
         title: ["What's for Dinner", "Christmas List", "Abacus"],
