@@ -2,7 +2,7 @@ var dataHome = data.home;
 var dataPortFolio = data.portfolio;
 var dataContact = data.contact;
 var dataLinks = data.links;
-var html1,html2,html3;
+var html1,html2,html3, html4;
 
 var Content = function (id, title, desc, links) {
     this.id = id;
@@ -124,29 +124,39 @@ function populatePortfolio() {
     document.getElementById('portfolio').innerHTML += html1
     document.getElementById('portfolio').innerHTML += html2;
     document.getElementById('portfolio').innerHTML += html3;
+    document.getElementById('portfolio').innerHTML += html4;
 }
 
 function createHTML() {
    html1 =    `<div class='portfolio-wrapper'>
             <h2 id='title'>${dataPortFolio.title[0]}<h2><br>
-            <img class='portfolio-image' src='http://i64.tinypic.com/snmd1t.png'>       
+            <img class='portfolio-image' src='./assets/images/whatsfordinner.png'>       
             <p id='desc'>${dataPortFolio.description[0]}</p>
             <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}</span><br>
             <a id='links' href='${data.links.projectLinks[0]}'>${dataPortFolio.title[0]}</a></div>`;
     html2 = `<div class='portfolio-wrapper'>
             <h2 id='title'>${dataPortFolio.title[1]}<h2><br>
-            <img class='portfolio-image' src='http://i66.tinypic.com/2wmghhh.png'>
+            <img class='portfolio-image' src='../assets/images/christmaslist.png'>
             <p id='desc'>${dataPortFolio.description[1]}</p>
             <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}${dataHome.technologies[3]}${dataHome.technologies[6]}</span><br>
             <a id='links' href='${data.links.projectLinks[1]}'>${dataPortFolio.title[1]}</a></div>`;
 
     html3 = `<div class='portfolio-wrapper'>
             <h2 id='title'>${dataPortFolio.title[2]}<h2><br>
-            <img class='portfolio-image' src='http://i64.tinypic.com/2uy38tl.png'>
+            <img class='portfolio-image' src='../assets/images/abacus.png'>
             <p id='desc'>${dataPortFolio.description[2]}</p>
             <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}${dataHome.technologies[3]}${dataHome.technologies[7]}</span><br>
-            <a id='links' href='${data.links.projectLinks[2]}'>${dataPortFolio.title[2]}</a></div>`;       
-    return html1, html2, html3;
+            <a id='links' href='${data.links.projectLinks[2]}'>${dataPortFolio.title[2]}</a></div>`;   
+            
+    html4 = `<div class='portfolio-wrapper'>
+            <h2 id='title'>${dataPortFolio.title[3]}<h2><br>
+            <img class='portfolio-image' src='../assets/images/budget.png'>
+            <p id='desc'>${dataPortFolio.description[3]}</p>
+            <span>${dataHome.technologies[1]}${dataHome.technologies[2]}${dataHome.technologies[0]}</span><br>
+            <a id='links' href='${data.links.projectLinks[3]}'>${dataPortFolio.title[3]}</a></div>`;
+            
+            
+    return html1, html2, html3, html4;
 
 }
 
