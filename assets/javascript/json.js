@@ -1,4 +1,4 @@
-var data = {
+data = {
 
     home: {
         id: 'home',
@@ -11,7 +11,7 @@ var data = {
         Everything changed when we welcomed our first child into the world this year.
         After our baby girl's birth, I wanted to teach her to follow her dreams fearlessly and persistently.
         In an attempt to show her this, I quit my job of eight years and enrolled in KU Coding Certificate in pursuit of my passions.`,
-
+        profileImg: "./assets/images/profilepic.jpg",
         technologies: ['<img class="icons" src="https://img.icons8.com/color/48/000000/javascript.png"/>',
             '<img class="icons" src="https://img.icons8.com/color/48/000000/html-5.png"/>',
             '<img class="icons" src="https://img.icons8.com/color/48/000000/css3.png"/>',
