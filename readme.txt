@@ -1,5 +1,12 @@
-Redo the top-page part for the Home and portfolio
+//Animate a logo
 
-get the icons to rotate on entry
+//Revamp the contact area
 
-line up all the other features to make it look and work smoothly;
+// give it more CSS to make it look better
+ 
+//  Revamp the home blurb to a few sentences and make it more towards why they should hire me.
+
+// Animate background
+
+// See how the templates work and why they are better to use.
+

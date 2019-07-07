@@ -89,27 +89,6 @@ function populatePage() {
     }
   });
 }
-let i = 0;
-let txt = "Hi! My name is Victor.";
-function typeWriter() {
-  const speed = 80;
-
-  if (i < txt.length) {
-    document.getElementById("type-writer").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  } else if (i == txt.length) {
-    txt = "I am a Full-stack Web Developer.";
-    if (i < txt.length) {
-      i = 0;
-      document.getElementById("type-writer").innerHTML +=
-        "<br>" + txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-}
-typeWriter();
 
 function instantiateIcons() {
   for (let i = 0; i < dataHome.technologies.length; i++) {

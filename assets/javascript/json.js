@@ -5,12 +5,9 @@ data = {
         title: 'Home',
         description: `I grew up in a small town in West Virginia, I was fascinated by computers growing up, and
         I knew I wanted to work with technology at a young age.
-        After graduating high school, I enjoyed reparing, building and maintaining computers for friends and family.
-        I met my wonderful wife soon after and moved to Missouri to be with her.
+        After graduating high school, I enjoyed reparing, building and maintaining computers.
         I spend my recent years working for a mirror and glass company cutting and fabricating mirrors for customers.
-        Everything changed when we welcomed our first child into the world this year.
-        After our baby girl's birth, I wanted to teach her to follow her dreams fearlessly and persistently.
-        In an attempt to show her this, I quit my job of eight years and enrolled in KU Coding Certificate in pursuit of my passions.`,
+        Always having a passion for technology. I recently graduated Kansas University Certification Program to further my knowledge and growth.`,
         profileImg: "./assets/images/profilepic.jpg",
         technologies: ['<img class="icons" src="https://img.icons8.com/color/48/000000/javascript.png"/>',
             '<img class="icons" src="https://img.icons8.com/color/48/000000/html-5.png"/>',
