@@ -37,10 +37,21 @@ document.querySelector("*").addEventListener("click", function(event) {
     case "home-button":
       // document.getElementById('contact', 'portfolio').classList.remove('active');
       // document.getElementById('home').classList.add('active');
-      document.getElementById("home").scrollIntoView({
+      document.getElementById("top-container").scrollIntoView({
         behavior: "smooth",
         block: "center",
         inline: "nearest"
+      });
+      // setTopPage(el[0]);
+      break;
+
+    case "about-button":
+      // document.getElementById('contact', 'portfolio').classList.remove('active');
+      // document.getElementById('home').classList.add('active');
+      document.getElementById("about").scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "end"
       });
       // setTopPage(el[0]);
       break;
@@ -76,11 +87,9 @@ document.querySelector("*").addEventListener("click", function(event) {
 function populatePage() {
   el.forEach(contents => {
     if (contents !== portfolio && contents !== contact) {
-      document.getElementById(contents.id).innerHTML = `<div id='${
-        contents.id
-      }'>
-                    <h2 id='title'>${contents.title}<h2><br>
-                    <p id='para'>${contents.desc}</p><br>`;
+      document.getElementById(contents.id).innerHTML = `<div id='${contents.id}'>
+      <img id='profile' src='./assets/images/profilepic.jpg'/>
+        <p id='para'>${contents.desc}</p><br>`;
     } else if (contents == contact) {
       populateContact();
     } else {
@@ -92,14 +101,12 @@ function populatePage() {
 
 function instantiateIcons() {
   for (let i = 0; i < dataHome.technologies.length; i++) {
-    document.getElementById("icons").innerHTML += dataHome.technologies[i];
+    document.getElementById("icons").innerHTML += `${dataHome.technologies[i]} <br>`;
   }
 }
 
 function populateContact() {
-  document.getElementById(
-    "contact"
-  ).innerHTML += `<h3 id='contact-title'>Contact</h3>
+  document.getElementById("contact").innerHTML += `<h3 id='contact-title'></h3>
         <form action="https://formspree.io/vadams.dev@gmail.com" method="POST">
             <strong>Name:</strong><br><input type="text" name="name" placeholder='John Doe'><br>
             <strong>Email:</strong><br><input type="email" name="_replyto" placeholder='1234@gmail.com'><br>
@@ -161,6 +168,8 @@ function createHTML() {
 
   return html1, html2, html3, html4;
 }
+
+
 
 function init() {
   populatePage();
