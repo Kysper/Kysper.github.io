@@ -31,63 +31,89 @@ const contact = new Content(
 );
 const el = [home, contact, portfolio];
 
-document.querySelector("*").addEventListener("click", function(event) {
-  const id = event.target.id;
-  switch (id) {
-    case "home-button":
-      // document.getElementById('contact', 'portfolio').classList.remove('active');
-      // document.getElementById('home').classList.add('active');
-      document.getElementById("top-container").scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest"
-      });
-      // setTopPage(el[0]);
-      break;
+const buttons = document
+  .querySelector("*")
+  .addEventListener("click", function(event) {
+    const id = event.target.id;
+    switch (id) {
+      case "home-button":
+        document.getElementById("top-container").scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "nearest"
+        });
+        break;
 
-    case "about-button":
-      // document.getElementById('contact', 'portfolio').classList.remove('active');
-      // document.getElementById('home').classList.add('active');
-      document.getElementById("about").scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "end"
-      });
-      // setTopPage(el[0]);
-      break;
-    case "contact-button":
-      // document.getElementById('home','portfolio').classList.remove('active');
-      // document.getElementById('contact').classList.add('active');
-      document.getElementById("contact").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-      });
-      // setTopPage(el[1]);
-      break;
-    case "portfolio-button":
-      // document.getElementById('home','contact').classList.remove('active');
-      // document.getElementById('portfolio').classList.add('active');
-      document.getElementById("portfolio").scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "nearest"
-      });
-      // setTopPage(el[2]);
-      break;
-    case "logo":
-      document.querySelector("#top-container").scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
-      });
-  }
-});
+      case "about-button":
+        document.getElementById("about").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+        });
+
+     
+        break;
+      case "contact-button":
+        document.getElementById("contact").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+        });
+        break;
+      case "portfolio-button":
+        document.getElementById("portfolio").scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "nearest"
+        });
+        break;
+      case "logo":
+        document.querySelector("#top-container").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+        });
+        case "home-mobile":
+          document.getElementById("top-container").scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest"
+            
+          });toggleResponsiveMenu()
+          break;
+  
+        case "about-mobile":
+          document.getElementById("about").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+          });toggleResponsiveMenu()
+  
+       
+          break;
+        case "contact-mobile":
+          document.getElementById("contact").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+          });toggleResponsiveMenu()
+          break;
+        case "portfolio-mobile":
+          document.getElementById("portfolio").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+          });toggleResponsiveMenu()
+          break;
+    }
+  });
 
 function populatePage() {
   el.forEach(contents => {
     if (contents !== portfolio && contents !== contact) {
-      document.getElementById(contents.id).innerHTML = `<div id='${contents.id}'>
+      document.getElementById(contents.id).innerHTML = `<div id='${
+        contents.id
+      }'>
       <img id='profile' src='./assets/images/profilepic.jpg'/>
         <p id='para'>${contents.desc}</p><br>`;
     } else if (contents == contact) {
@@ -101,7 +127,9 @@ function populatePage() {
 
 function instantiateIcons() {
   for (let i = 0; i < dataHome.technologies.length; i++) {
-    document.getElementById("icons").innerHTML += `${dataHome.technologies[i]} <br>`;
+    document.getElementById("icons").innerHTML += `${
+      dataHome.technologies[i]
+    } <br>`;
   }
 }
 
@@ -167,6 +195,43 @@ function createHTML() {
   }</a></div>`;
 
   return html1, html2, html3, html4;
+}
+
+window.onscroll = function() {
+  scrollToColor();
+};
+
+function scrollToColor() {
+  element = document.querySelector("html");
+  const btnPixels = element.scrollTop;
+  if (btnPixels >= 300 || btnPixels >= 300) {
+    document.querySelector("#home-button").className = "color-change";
+    document.querySelector("#about-button").className = "color-change";
+    document.querySelector("#portfolio-button").className = "color-change";
+    document.querySelector("#contact-button").className = "color-change";
+    document.querySelector("#logo").className = "color-change";
+    document.querySelector('#bar1').className = "color-change"
+    document.querySelector('#bar2').className = "color-change"
+    document.querySelector('#bar3').className = "color-change"
+  } else {
+    document.querySelector("#home-button").className = "btn";
+    document.querySelector("#about-button").className = "btn ";
+    document.querySelector("#portfolio-button").className = "btn ";
+    document.querySelector("#contact-button").className = "btn ";
+    document.querySelector("#logo").className = " ";
+    document.querySelector('#bar1').className = "hamburger"
+    document.querySelector('#bar2').className = "hamburger"
+    document.querySelector('#bar3').className = "hamburger"
+  }
+}
+
+document.querySelector('#menu').addEventListener('click', (e) =>{
+  toggleResponsiveMenu();
+})
+
+function toggleResponsiveMenu(){
+  const nav = document.querySelector('#myNav')
+  nav.style.height = nav.style.height === '100%' ? '0%' : '100%'
 }
 
 

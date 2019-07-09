@@ -17,19 +17,19 @@ html {
   top: -25px;
   width: 100%;
   z-index: 1;
-  margin:0 auto;
+  margin: 0 auto;
   padding: 0 auto;
 }
 #type-writer {
   display: hidden;
-  overflow:hidden;
-  position:relative;
-  left:-3%;
+  overflow: hidden;
+  position: relative;
+  left: -3%;
   border-right: 0.15em solid #000d4d;
   white-space: nowrap;
   margin: 0 auto;
-  max-width: 25%;
-  letter-spacing: 0.10em;
+  max-width: 29%;
+  letter-spacing: 0.1em;
   text-align: center;
   color: #000d4d;
   animation: typing 5.5s steps(50, end), blink-caret 0.75s step-end infinite;
@@ -72,7 +72,7 @@ html {
 #logo-large {
   display: hidden;
   position: relative;
-  left: 45%;
+  left: 46%;
   border: 10px double #000d4d;
   color: #000d4d;
   box-shadow: 4px 4px 4px #000d4d;
@@ -80,10 +80,22 @@ html {
   width: 60px;
   white-space: nowrap;
   padding: 1%;
-  margin-bottom:20%;
+  margin-bottom: 5%;
   height: 60px;
   font-size: 50px;
   animation: pulse 3s ease-in infinite;
+}
+
+.color-change {
+  background: #88b7b9;
+  text-shadow: 4px 4px 4px black;
+  box-shadow: 4px 4px 4px black;
+  padding: 5px;
+  margin: 20px 0px 0px 1%;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  border-radius: 10%;
 }
 
 @keyframes pulse {
@@ -97,7 +109,6 @@ html {
     opacity: 1;
   }
 }
-
 
 a {
   text-decoration: none;
@@ -129,15 +140,16 @@ a {
 }
 
 #profile {
-  position: relative;
+  position:relative;
   border-radius: 50%;
-  left:37%;
+  right:6%;
   border: 3px #000d4d solid;
   width: 200px;
   height: 200px;
-  margin: 0%, 0%, 0%, 0%;
+  align-self:center;
 }
 #top-container {
+  z-index: -1;
   padding-top: 15%;
   height: 150px;
   background: linear-gradient(black, cadetblue, white);
@@ -162,8 +174,15 @@ a {
 }
 
 #about {
-  margin-top:5%;
-  margin-bottom:0%;
+  position:relative;
+  margin-top: 15%;
+  margin-bottom: 0%; 
+  text-align:center;
+  margin-left:3%;
+}
+
+#home{
+  text-align:center;
 }
 
 #skill-set {
@@ -191,8 +210,8 @@ img .icons {
   padding: 20px;
   font-size: 20px;
   width: 50%;
-  margin-left: 20%;
-  margin-top:2%;
+  margin-left: 16%;
+  margin-top: 2%;
 }
 
 #about {
@@ -200,7 +219,7 @@ img .icons {
   color: #000d4d;
   font-size: 40px;
   text-decoration-line: underline;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
 #port-title {
@@ -208,6 +227,7 @@ img .icons {
   color: #000d4d;
   font-size: 40px;
   text-decoration-line: underline;
+  margin-top:10%;
 }
 
 #portfolio {
@@ -255,7 +275,7 @@ textarea {
 }
 
 .portfolio-image {
-  width: 100%;
+  max-width: 0 auto;
   height: 140px;
   padding-bottom: 5px;
 }
@@ -289,6 +309,10 @@ textarea {
   text-align: center;
 }
 
+#myNav {
+  display: none;
+}
+
 /*MEDIA CHANGES*/
 @media only screen and (max-width: 720px) {
   .btn {
@@ -304,14 +328,22 @@ textarea {
 
   #para {
     width: 70%;
-    margin:2% 0% 2% 10%;
+    margin: 2% 0% 2% 10%;
     text-align: left;
   }
 
   #profile {
+    left:.5%;
     position: relative;
-    left:29%;
-    margin-top:5%;
+    margin-top: 7%;
+  }
+
+  #top-container {
+    z-index: -1;
+    padding-top: 20%;
+    height: 150px;
+    background: linear-gradient(black, cadetblue, white);
+    width: 100%;
   }
 
   .hamburger {
@@ -322,6 +354,17 @@ textarea {
     height: 10px;
     background-color: white;
     margin: 0px 0;
+  }
+
+  .color-change {
+    background-color: #4672aa;
+    position: relative;
+    right: 20px;
+    top: 0px;
+    width: 40px;
+    margin: 0px 0;
+    padding:0;
+    
   }
 
   #bar1 {
@@ -342,35 +385,35 @@ textarea {
     height: 5px;
   }
 
-  .menu{
-    position:fixed;
-    right:15px;
-    top:20px;
-    display:hidden;
-    width:45px;
+  #menu {
+    display: block;
+    position: fixed;
+    right: 15px;
+    top: 20px;
+    width: 45px;
     height: 40px;
+    z-index: 1;
   }
-
   #logo-large {
     text-align: center;
-    left: 42%;
-    margin-bottom:20px;
+    left: 40.5%;
+    margin-bottom: 20px;
   }
 
   #logo {
-    display:none;
+    display: none;
     position: relative;
-    top:-30px;
-    left:-10px;
+    top: -30px;
+    left: -10px;
   }
 
   .navbar {
+    display: none;
     position: fixed;
     top: 0px;
     width: 100%;
     z-index: 0;
   }
-
   #type-writer {
     display: none;
   }
@@ -412,6 +455,71 @@ textarea {
   #skill-set {
     margin: 1% auto;
     padding: 1 auto;
+  }
+
+  #myNav {
+    display: block;
+    height: 0%;
+    width: 100%;
+  }
+
+  .overlay {
+    width: 100%;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    background-color: rgb(6, 98, 134); 
+    background-color: rgba(3, 24, 70, 0.9);
+    overflow-x: hidden; 
+    transition: 0.5s;
+  }
+
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    text-align: center;
+    margin-top: 30px; 
+  }
+
+  /* The navigation links inside the overlay */
+  .overlay .btn {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 32px;
+    color: rgb(154, 202, 241);
+    display: block; 
+    transition: 0.3s; 
+    margin-bottom:100px;
+  }
+
+  .overlay .btn:hover,
+  .overlay .btn:focus {
+    color: white;
+    background-color:cadetblue;
+  }
+
+  #home-mobile{
+    margin-left:25%;
+    width:50%;
+    border-radius:5%;
+  }
+  #about-mobile{
+    margin-left:25%;
+    width:50%;
+    border-radius:5%;
+  }
+  #portfolio-mobile{
+    margin-left:25%;
+    width:50%;
+    border-radius:5%;
+  }
+  #contact-mobile{
+    margin-left:25%;
+    width:50%;
+    border-radius:5%;
   }
 
 }
