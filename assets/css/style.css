@@ -20,37 +20,96 @@ html {
   margin: 0 auto;
   padding: 0 auto;
 }
-#type-writer {
-  display: hidden;
-  overflow: hidden;
-  position: relative;
-  left: -3%;
-  border-right: 0.15em solid #000d4d;
+
+.css-typing p {
+  border-right: .15em solid orange;
+  font-size: 32px;
+  font-weight: bolder;
+  color:cadetblue;
+  text-shadow: 3px 3px 3px #000d4d;
   white-space: nowrap;
-  margin: 0 auto;
-  max-width: 29%;
-  letter-spacing: 0.1em;
-  text-align: center;
-  color: #000d4d;
-  animation: typing 5.5s steps(50, end), blink-caret 0.75s step-end infinite;
+  overflow: hidden;
+  margin-left:41%;
 }
 
-@keyframes blink-caret {
-  from,
-  to {
+.css-typing p:nth-child(1) {
+  width: 10.3em;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.css-typing p:nth-child(2) {
+  width: 9.8em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+@keyframes blink {
+  50% {
     border-color: transparent;
   }
-  40% {
-    border-color: #000d4d;
-  }
 }
-
-@keyframes typing {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
   }
 }
 
@@ -72,7 +131,7 @@ html {
 #logo-large {
   display: hidden;
   position: relative;
-  left: 46%;
+  left: 47.5%;
   border: 10px double #000d4d;
   color: #000d4d;
   box-shadow: 4px 4px 4px #000d4d;
@@ -367,6 +426,10 @@ textarea {
     
   }
 
+  .css-typing{
+    display:none;
+  }
+
   #bar1 {
     position: fixed;
     top: 30px;
@@ -396,7 +459,7 @@ textarea {
   }
   #logo-large {
     text-align: center;
-    left: 40.5%;
+    left: 42.5%;
     margin-bottom: 20px;
   }
 
@@ -414,9 +477,7 @@ textarea {
     width: 100%;
     z-index: 0;
   }
-  #type-writer {
-    display: none;
-  }
+
 
   #portfolio-wrapper {
     display: grid;
