@@ -5,9 +5,9 @@ data = {
         title: 'Home',
         description: `I grew up in a small town in West Virginia, I was fascinated by computers growing up, and
         I knew I wanted to work with technology at a young age.
-        After graduating high school, I enjoyed reparing, building and maintaining computers.
-        I spend my recent years working for a mirror and glass company cutting and fabricating mirrors for customers.
-        Always having a passion for technology. I recently graduated Kansas University Certification Program to further my knowledge and growth.`,
+        After graduating high school, I enjoyed repairing, building, and maintaining computers.
+        I spend my recent years working for a mirror and glass company cutting and fabricating mirrors for customers and
+        Always having a passion for technology always on my mind. I recently graduated Kansas University Certification Program to further my knowledge and growth.`,
         profileImg: "./assets/images/profilepic.jpg",
         technologies: ['<img class="icons" src="https://img.icons8.com/color/48/000000/javascript.png"/>',
             '<img class="icons" src="https://img.icons8.com/color/48/000000/html-5.png"/>',
