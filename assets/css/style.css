@@ -5,7 +5,7 @@
 }
 
 body {
-  color: black;
+  color: #000000;
 }
 
 html {
@@ -27,7 +27,7 @@ html {
   font-weight: bolder;
   white-space: nowrap;
   overflow: hidden;
-  margin-left:39%;
+  margin:0 auto;
 }
 
 .css-typing p:nth-child(1) {
@@ -114,9 +114,9 @@ html {
 #logo {
   max-width: auto;
   float: left;
-  border: 10px double white;
+  border: 10px double #FFFFFF;
   text-align: center;
-  color: white;
+  color: #FFFFFF;
   padding: 5px;
   font-size: 35px;
   font-weight: bold;
@@ -127,44 +127,31 @@ html {
 }
 
 #logo-large {
-  display: hidden;
+  display: block;
   position: relative;
-  left: 45%;
+  margin:0 auto;
   border: 10px double #000d4d;
   color: #000d4d;
   box-shadow: 4px 4px 4px #000d4d;
   text-shadow: 4px 4px 4px #000d4d;
-  width: 60px;
+  width: 65px;
   white-space: nowrap;
   padding: 1%;
   margin-bottom: 5%;
-  height: 60px;
+  height: 65px;
   font-size: 50px;
-  animation: pulse 3s ease-in infinite;
 }
 
 .color-change {
   background: #88b7b9;
-  text-shadow: 4px 4px 4px black;
-  box-shadow: 4px 4px 4px black;
+  text-shadow: 4px 4px 4px #000000;
+  box-shadow: 4px 4px 4px #000000;
   padding: 5px;
   margin: 20px 0px 0px 1%;
   cursor: pointer;
   font-size: 20px;
-  color: white;
+  color: #FFFFFF;
   border-radius: 10%;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 a {
@@ -181,35 +168,36 @@ a {
 
 .btn {
   background: none;
-  text-shadow: 4px 4px 4px black;
-  box-shadow: 4px 4px 4px black;
+  text-shadow: 4px 4px 4px #000000;
+  box-shadow: 4px 4px 4px #000000;
   padding: 5px;
   margin: 20px 0px 0px 1%;
   cursor: pointer;
   font-size: 20px;
-  color: white;
+  color: #FFFFFF;
   border-radius: 10%;
 }
 .container {
   width: 100%;
   font-size: 12px;
-  color: white;
+  color: #FFFFFF;
 }
 
 #profile {
+  display:block;
   position:relative;
   border-radius: 50%;
-  right:8.6%;
   border: 3px #000d4d solid;
+  margin:0 auto;
+  left:-5.2%;
   width: 200px;
   height: 200px;
-  align-self:center;
 }
 #top-container {
   z-index: -1;
   padding-top: 15%;
   height: 150px;
-  background: linear-gradient(black, cadetblue, white);
+  background: linear-gradient(#000000, cadetblue, #FFFFFF);
   width: 100%;
 }
 
@@ -224,7 +212,7 @@ a {
 }
 
 #about-wrapper {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
@@ -235,7 +223,6 @@ a {
   margin-top: 15%;
   margin-bottom: 0%; 
   text-align:center;
-  margin-left:-40px;
 }
 
 #home{
@@ -263,7 +250,7 @@ img .icons {
 
 #para {
   position: relative;
-  color: black;
+  color: #000000;
   padding: 20px;
   font-size: 20px;
   width: 50%;
@@ -293,7 +280,7 @@ img .icons {
   justify-content: space-around;
   align-content: center;
   width: 100%;
-  background: linear-gradient(white, cadetblue);
+  background: linear-gradient(#FFFFFF, cadetblue);
   background-blend-mode: color;
 }
 
@@ -301,7 +288,7 @@ img .icons {
   position: relative;
   font-size: 40px;
   text-align: center;
-  background: linear-gradient(to top, black, cadetblue);
+  background: linear-gradient(to top, #000000, cadetblue);
   color: #000d4d;
   text-decoration: underline;
   padding-top: 20%;
@@ -309,7 +296,7 @@ img .icons {
 
 strong {
   font-size: 30px;
-  color: black;
+  color: #000000;
   margin: 20px 20px 20px 20px;
 }
 input {
@@ -319,7 +306,7 @@ input {
 }
 
 #send {
-  color: white;
+  color: #FFFFFF;
   background-color: #000d4d;
   margin-bottom: 5%;
   width: 200px;
@@ -339,18 +326,18 @@ textarea {
 
 .portfolio-wrapper {
   width: 95%;
-  border: 2px solid black;
-  box-shadow: 8px 8px 10px black;
+  border: 2px solid #000000;
+  box-shadow: 8px 8px 20px #000000;
   text-align: center;
-  border-radius: 10%;
-  color: black;
+  border-radius: 20px;
+  color: #000000;
   overflow: auto;
   margin: 5% 1% 2% 2%;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 #portfolio-wrapper:hover {
-  background: radial-gradient(cadetblue, white, white, lightblue);
+  background: radial-gradient(cadetblue, #FFFFFF, #FFFFFF, lightblue);
 }
 
 #desc {
@@ -362,7 +349,7 @@ textarea {
 
 #footer {
   background-color: #000d4d;
-  color: white;
+  color: #FFFFFF;
   text-align: center;
 }
 
@@ -390,7 +377,6 @@ textarea {
   }
 
   #profile {
-    left:.5%;
     position: relative;
     margin-top: 7%;
   }
@@ -399,7 +385,7 @@ textarea {
     z-index: -1;
     padding-top: 20%;
     height: 150px;
-    background: linear-gradient(black, cadetblue, white);
+    background: linear-gradient(#000000, cadetblue, #FFFFFF);
     width: 100%;
   }
 
@@ -409,7 +395,7 @@ textarea {
     top: 0px;
     width: 40px;
     height: 10px;
-    background-color: white;
+    background-color: #FFFFFF;
     margin: 0px 0;
   }
 
@@ -456,16 +442,14 @@ textarea {
     z-index: 1;
   }
   #logo-large {
+    
     text-align: center;
-    left: 42.5%;
+  
     margin-bottom: 20px;
   }
 
   #logo {
     display: none;
-    position: relative;
-    top: -30px;
-    left: -10px;
   }
 
   .navbar {
@@ -483,7 +467,7 @@ textarea {
     justify-content: space-around;
     align-content: center;
     width: 100%;
-    background-color: white;
+    background-color: #FFFFFF;
   }
 
   input {
@@ -556,7 +540,7 @@ textarea {
 
   .overlay .btn:hover,
   .overlay .btn:focus {
-    color: white;
+    color: #FFFFFF;
     background-color:cadetblue;
   }
 
